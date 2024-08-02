@@ -567,6 +567,29 @@
           "execution_count": 6
         }
       ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git status"
+      ],
+      "metadata": {
+        "id": "buYRjq9g4tG9",
+        "outputId": "fc621450-f4ee-4db5-efd3-10c96d7b01f6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "fatal: not a git repository (or any of the parent directories): .git\n"
+          ]
+        }
+      ]
     }
   ]
 }
