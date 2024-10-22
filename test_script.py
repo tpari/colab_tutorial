@@ -12,6 +12,7 @@ hyperparameter2 = args.hyperparameter2
 results_file = args.results_file
 
 #Generate the result using these hyperparameters
+#In most cases, this would be something more complicated, like training a model and computing its accuracy on a test set
 result = hyperparameter1 + hyperparameter2
 
 #Print this result in the notebook
