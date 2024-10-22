@@ -1,0 +1,27 @@
+from csv import writer
+import argparse
+
+#Read in the hyperparameters through the command line arguments
+parser = argparse.ArgumentParser(description='Script for Colab Tutorial')
+parser.add_argument('--hyperparameter1', type=int, default= 498)
+parser.add_argument('--hyperparameter2', type=int, default= 6)
+parser.add_argument('--results_file', type=str, default= "results.csv")
+
+hyperparameter1 = args.hyperparameter1
+hyperparameter2 = args.hyperparameter2
+results_file = args.results_file
+
+#Generate the result using these hyperparameters
+result = hyperparameter1 + hyperparameter2
+
+#Print this result in the notebook
+print(result)
+
+#Construct a list containing the data to append to the csv file
+row_to_add = [hyperparameter1, hyperparameter2, result]
+                
+#Print this data to the csv file
+with open(resuts_file, 'a') as f_object:
+    writer_object = writer(f_object)
+    writer_object.writerow(row_to_add)
+    f_object.close()
