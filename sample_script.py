@@ -3,8 +3,8 @@ import argparse
 
 #Read in the hyperparameters through the command line arguments
 parser = argparse.ArgumentParser(description='Script for Colab Tutorial')
-parser.add_argument('--hyperparameter1', type=int, default= 498)
-parser.add_argument('--hyperparameter2', type=int, default= 6)
+parser.add_argument('--hyperparameter1', type=int, default=498)
+parser.add_argument('--hyperparameter2', type=int, default=2)
 parser.add_argument('--results_file', type=str, default= "results.csv")
 
 hyperparameter1 = args.hyperparameter1
