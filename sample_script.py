@@ -7,6 +7,8 @@ parser.add_argument('--hyperparameter1', type=int, default=498)
 parser.add_argument('--hyperparameter2', type=int, default=2)
 parser.add_argument('--results_file', type=str, default= "results.csv")
 
+args = parser.parse_args()
+
 hyperparameter1 = args.hyperparameter1
 hyperparameter2 = args.hyperparameter2
 results_file = args.results_file
@@ -22,7 +24,7 @@ print(result)
 row_to_add = [hyperparameter1, hyperparameter2, result]
                 
 #Print this data to the csv file
-with open(resuts_file, 'a') as f_object:
+with open(results_file, 'a') as f_object:
     writer_object = writer(f_object)
     writer_object.writerow(row_to_add)
     f_object.close()
