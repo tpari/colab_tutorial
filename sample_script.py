@@ -5,7 +5,9 @@ import argparse
 parser = argparse.ArgumentParser(description='Script for Colab Tutorial')
 parser.add_argument('--hyperparameter1', type=int, default=498)
 parser.add_argument('--hyperparameter2', type=int, default=2)
-parser.add_argument('--results_file', type=str, default= None)
+parser.add_argument('--results_file', type=str, default= "results.csv")
+
+args = parser.parse_args()
 
 hyperparameter1 = args.hyperparameter1
 hyperparameter2 = args.hyperparameter2
@@ -21,9 +23,8 @@ print(result)
 #Construct a list containing the data to append to the csv file
 row_to_add = [hyperparameter1, hyperparameter2, result]
                 
-#Print this data to the csv file if one is provided in the command line arguments
-if results_file is not None:
-  with open(resuts_file, 'a') as f_object:
-      writer_object = writer(f_object)
-      writer_object.writerow(row_to_add)
-      f_object.close()
+#Print this data to the csv file
+with open(results_file, 'a') as f_object:
+    writer_object = writer(f_object)
+    writer_object.writerow(row_to_add)
+    f_object.close()
