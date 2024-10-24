@@ -19,7 +19,6 @@ result = hyperparameter1 + hyperparameter2
 
 #Print this result in the notebook
 print(result)
-print("added at tutorial")
 
 #Export the result to a csv file if a file was specified
 if results_file is not None:
