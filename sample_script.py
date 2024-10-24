@@ -19,12 +19,16 @@ result = hyperparameter1 + hyperparameter2
 
 #Print this result in the notebook
 print(result)
+print("added at tutorial")
 
-#Construct a list containing the data to append to the csv file
-row_to_add = [hyperparameter1, hyperparameter2, result]
-                
-#Print this data to the csv file
-with open(results_file, 'a') as f_object:
-    writer_object = writer(f_object)
-    writer_object.writerow(row_to_add)
-    f_object.close()
+#Export the result to a csv file if a file was specified
+if results_file is not None:
+
+  #Construct a list containing the data to append to the csv file
+  row_to_add = [hyperparameter1, hyperparameter2, result]
+                  
+  #Print this data to the csv file
+  with open(results_file, 'a') as f_object:
+      writer_object = writer(f_object)
+      writer_object.writerow(row_to_add)
+      f_object.close()
