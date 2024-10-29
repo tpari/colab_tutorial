@@ -5,7 +5,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Script for Colab Tutorial')
 parser.add_argument('--hyperparameter1', type=int, default=498)
 parser.add_argument('--hyperparameter2', type=int, default=2)
-parser.add_argument('--results_file', type=str, default= "results.csv")
+parser.add_argument('--results_file', type=str, default= None)
 
 args = parser.parse_args()
 
